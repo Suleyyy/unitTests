@@ -6,6 +6,7 @@ class ModifyStudents:
     @staticmethod
     def add_student(students,n,s,iden):
         students.append({"Name": n, "Surname": s, "ID": iden})
+        return students
 
     # method to add student to file
     @staticmethod

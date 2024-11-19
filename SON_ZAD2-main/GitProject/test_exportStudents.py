@@ -8,9 +8,9 @@ class TestExportStudents:
         #Given
         mock = ExportStudents.csv
         path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.csv'
-        students = [{'Name': 'John', 'Surname': 'Snow'}, {'Name': 'Janusz', 'Surname': 'Tracz'}]
+        students = [{'Name': 'John', 'Surname': 'Snow', 'ID':'ABC'}, {'Name': 'Janusz', 'Surname': 'Tracz', 'ID':'BCA'}]
         mock(path, students)
-        want = 'John;Snow\nJanusz;Tracz'
+        want = 'John;Snow;ABC\nJanusz;Tracz;BCA'
         file = open(path, 'r')
         #When
         got = file.read()
@@ -24,9 +24,9 @@ class TestExportStudents:
         #Given
         mock = ExportStudents.txt
         path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.txt'
-        students = [{'Name': 'John', 'Surname': 'Snow'}, {'Name': 'Janusz', 'Surname': 'Tracz'}]
+        students = [{'Name': 'John', 'Surname': 'Snow', 'ID':'ABC'}, {'Name': 'Janusz', 'Surname': 'Tracz', 'ID':'BCA'}]
         mock(path, students)
-        want = 'John Snow\nJanusz Tracz'
+        want = 'John Snow - ABC\nJanusz Tracz - BCA'
         file = open(path, 'r')
         #When
         got = file.read()

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d00037-3a3c-472c-80ac-353c548d6d64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/test_mangeStudent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/manageStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/manageStudent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/test_exportStudents.py" beforeDir="false" afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/test_exportStudents.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.test_addStudent.executor": "Run",
+    "Python.test_mangeStudent.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "newtest",
     "node.js.detected.package.eslint": "true",
@@ -65,7 +69,7 @@
       <workItem from="1731874500890" duration="51000" />
       <workItem from="1731956569583" duration="229000" />
       <workItem from="1732029941989" duration="336000" />
-      <workItem from="1732031055832" duration="6042000" />
+      <workItem from="1732031055832" duration="9877000" />
     </task>
     <servers />
   </component>
@@ -73,6 +77,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/main_py$test_mangeStudent.coverage" NAME="test_mangeStudent Coverage Results" MODIFIED="1732041150950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SON_ZAD2-main/GitProject" />
     <SUITE FILE_PATH="coverage/main_py$test_addStudent.coverage" NAME="test_addStudent Coverage Results" MODIFIED="1731871513737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SON_ZAD2-main/GitProject" />
   </component>
 </project>
