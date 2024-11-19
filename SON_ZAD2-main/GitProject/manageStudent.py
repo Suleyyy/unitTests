@@ -4,16 +4,13 @@ import os
 class ModifyStudents:
     # method to add student to list
     @staticmethod
-    def add_student(students,n,s,id):
-        name = n
-        surname = s
-        student_id = id
-        students.append({"Name": name, "Surname": surname, "ID": student_id})
+    def add_student(students,n,s,iden):
+        students.append({"Name": n, "Surname": s, "ID": iden})
 
     # method to add student to file
     @staticmethod
-    def add_student_to_file(path, path2):
-        student = [input("Enter student's name: "), input("Enter student's surname: "), input("Enter student's ID: ")]
+    def add_student_to_file(path, path2,n,s,iden):
+        student = [n,s,iden]
         if os.path.exists(path) and os.path.exists(path2):
             file = open(path, "a")
             file2 = open(path2, "a")
@@ -26,10 +23,9 @@ class ModifyStudents:
             file2.write(student[0] + " " + student[1] + " - " + student[2])
 
     @staticmethod
-    def modify_student(students,n,s):
-        student_id = input("Enter student's ID to modify: ")
+    def modify_student(students,n,s,iden):
         for student in students:
-            if student["ID"] == student_id:
+            if student["ID"] == iden:
                 student["Name"] = n
                 student["Surname"] = s
                 return
@@ -37,10 +33,10 @@ class ModifyStudents:
 
 
     @staticmethod
-    def delete_student(students, id):
+    def delete_student(students, iden):
           for student in students:
-              if students["ID"] == id:
-                  del students[id]
+              if student["ID"] == iden:
+                  del student[iden]
                   return
           print("Student not found.")
 

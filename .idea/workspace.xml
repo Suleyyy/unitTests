@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d00037-3a3c-472c-80ac-353c548d6d64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/addStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/manageStudent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/manageStudent.py" beforeDir="false" afterPath="$PROJECT_DIR$/SON_ZAD2-main/GitProject/manageStudent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +65,7 @@
       <workItem from="1731874500890" duration="51000" />
       <workItem from="1731956569583" duration="229000" />
       <workItem from="1732029941989" duration="336000" />
-      <workItem from="1732031055832" duration="5658000" />
+      <workItem from="1732031055832" duration="6042000" />
     </task>
     <servers />
   </component>
