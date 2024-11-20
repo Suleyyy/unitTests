@@ -29,16 +29,16 @@ class ModifyStudents:
             if student["ID"] == iden:
                 student["Name"] = n
                 student["Surname"] = s
-                return
+                return students
         print("Student not found.")
 
 
     @staticmethod
     def delete_student(students, iden):
-          for student in students:
-              if student["ID"] == iden:
-                  del student[iden]
-                  return
+          for i in range(len(students)):
+              if students[i]["ID"] == iden:
+                  del students[i]
+                  return students
           print("Student not found.")
 
 

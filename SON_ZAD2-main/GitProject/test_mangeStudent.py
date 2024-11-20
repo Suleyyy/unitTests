@@ -58,6 +58,25 @@ class TestModify:
             os.remove(path)
             os.remove(path2)
 
+    @staticmethod
+    def test_modify_student():
+        #GIVEN
+        student = [{'Name':'Janusz','Surname':'Tracz','ID':'ABC'}]
+        want = [{'Name':'John','Surname':'Snow','ID':'ABC'}]
+        #WHEN
+        got = ModifyStudents.modify_student(student,'John','Snow', 'ABC')
+        #THEN
+        assert got == want
+
+    @staticmethod
+    def test_delete_student():
+        # GIVEN
+        student = [{'Name': 'Janusz', 'Surname': 'Tracz', 'ID': 'ABC'}]
+        want = []
+        # WHEN
+        got = ModifyStudents.delete_student(student, 'ABC')
+        # THEN
+        assert got == want
 
 
 
