@@ -7,7 +7,7 @@ class TestExportStudents:
     def test_csv():
         #Given
         mock = ExportStudents.csv
-        path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.csv'
+        path = 'temp.csv'
         students = [{'Name': 'John', 'Surname': 'Snow', 'ID':'ABC'}, {'Name': 'Janusz', 'Surname': 'Tracz', 'ID':'BCA'}]
         mock(path, students)
         want = 'John;Snow;ABC\nJanusz;Tracz;BCA'
@@ -23,7 +23,7 @@ class TestExportStudents:
     def test_txt():
         #Given
         mock = ExportStudents.txt
-        path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.txt'
+        path = 'temp.txt'
         students = [{'Name': 'John', 'Surname': 'Snow', 'ID':'ABC'}, {'Name': 'Janusz', 'Surname': 'Tracz', 'ID':'BCA'}]
         mock(path, students)
         want = 'John Snow - ABC\nJanusz Tracz - BCA'

@@ -19,8 +19,8 @@ class TestModify:
     @staticmethod
     def test_add_student_to_file():
         #Given
-        path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.csv'
-        path2 = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.txt'
+        path = 'temp.csv'
+        path2 = 'temp.txt'
         if not os.path.exists(path) and not os.path.exists(path2):
             want = 'John;Snow;ABC'
             want2 = 'John Snow - ABC'

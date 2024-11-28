@@ -6,7 +6,7 @@ class TestImportStudents:
     @staticmethod
     def test_import_csv():
         #GIVEN
-        path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.csv'
+        path = 'temp.csv'
         students = []
         file = open(path, 'w')
         str1 = 'John;Snow;ABC'
@@ -22,7 +22,7 @@ class TestImportStudents:
     @staticmethod
     def test_import_txt():
         # GIVEN
-        path = 'C:/Users/mikol/Desktop/unitTests/SON_ZAD2-main/GitProject/lists/temp.txt'
+        path = 'temp.txt'
         students = []
         file = open(path, 'w')
         str1 = 'John Snow - ABC'
