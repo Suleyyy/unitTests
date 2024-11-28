@@ -1,53 +1,65 @@
+import os
+
 class ExportStudents:
     @staticmethod
     def csv(path, list):
-        file = open(path, "w")
+        if not os.path.exists(path):
+            raise Exception("Path does not exist")
+        if len(list) != 0:
+            file = open(path, "w")
 
-        lines = []
+            lines = []
 
-        for i in range(len(list)):
-            student_details = list[i]
-            line = []
+            for i in range(len(list)):
+                student_details = list[i]
+                line = []
 
-            for student_detail_key in student_details:
-                line.append(student_details[student_detail_key])
+                for student_detail_key in student_details:
+                    line.append(student_details[student_detail_key])
 
-            line = ";".join(line)
+                line = ";".join(line)
 
-            if i < len(list) - 1:
-                line += "\n"
+                if i < len(list) - 1:
+                    line += "\n"
 
-            lines.append(line)
+                lines.append(line)
 
-        file.writelines(lines)
+            file.writelines(lines)
+            file.close()
+        raise("Trying to export empty list")
 
     @staticmethod
     def txt(path, list):
-        file = open(path, "w")
+        if not os.path.exists(path):
+            raise Exception("Path does not exist")
+        if len(list) != 0:
+            file = open(path, "w")
 
-        lines = []
+            lines = []
 
-        for i in range(len(list)):
-            student_details = list[i]
+            for i in range(len(list)):
+                student_details = list[i]
 
-            line = []
+                line = []
 
-            for student_detail_key in student_details:
-                line.append(student_details[student_detail_key])
+                for student_detail_key in student_details:
+                    line.append(student_details[student_detail_key])
 
-                if student_detail_key == "Surname":
-                    line.append(" - ")
-                else:
-                    line.append(" ")
+                    if student_detail_key == "Surname":
+                        line.append(" - ")
+                    else:
+                        line.append(" ")
 
 
-            line.pop()
+                line.pop()
 
-            line = "".join(line)
+                line = "".join(line)
 
-            if i < len(list) - 1:
-                line += "\n"
+                if i < len(list) - 1:
+                    line += "\n"
 
-            lines.append(line)
+                lines.append(line)
 
-        file.writelines(lines)
+            file.writelines(lines)
+            file.close()
+        raise Exception("Trying to export empty list")

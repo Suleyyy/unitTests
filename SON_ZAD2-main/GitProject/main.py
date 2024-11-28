@@ -16,12 +16,14 @@ for student in lista2:
     print(student.get("Name"), student.get("Surname"), student.get("ID"))
 '''
 
-#ModifyStudents.add_student_and_export(path, path2, lista)
+#lista2 = ModifyStudents.add_student(lista2, 'Vernon','Roche','3452SDD')
 
-#for student in lista:
-#    print(student.get("Name"), student.get("Surname"), student.get("ID"))
+for student in lista2:
 
-#ModifyStudents.add_student_by_overwriting(path, path2)
+    print(student.get("Name"), student.get("Surname"), student.get("ID"))
+
+ModifyStudents.add_student_to_file(path, path2,'Kazimierz','Tracz','CDE1234')
 #ModifyStudents.modify_student(path, path2, lista)
 
 #ModifyStudents.delete_student(path, path2, lista)
+

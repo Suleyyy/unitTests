@@ -17,8 +17,8 @@ class Attendance:
     # Displays the attendance list for students
     def download_attendance(self, date):
         if date not in self.presence:
-            print(f"No attendance data for {date}.")
-            return
+            raise Exception(f"No attendance data for {date}.")
+
         print(f"Attendance for {date}:")
         for student, present in self.presence[date].items():
             print(f"{student}: {'present' if present else 'absent'}")
@@ -26,18 +26,19 @@ class Attendance:
 
     # Clearing attendance data
     def clear_attendance(self, date):
+        if date not in self.presence:
+            raise Exception(f"No attendance data for {date}.")
         if date in self.presence:
             del self.presence[date]
             print(f"Attendance data for {date} has been removed.")
-        else:
-            print(f"No attendance data for {date}.")
         return self.presence
 
     # Modifies the attendance of students for a specific date
     def modify_attendance(self, date, student_name, presence):
-        if date not in self.presence or student_name not in self.presence[date]:
-            print(f"No attendance data found for {student_name} on {date}.")
-            return
+        if date not in self.presence:
+            raise Exception(f"No attendance data for {date}.")
+        if student_name not in self.presence[date]:
+            raise Exception(f"No student data for {student_name}.")
         self.presence[date][student_name] = presence
         print(f"Attendance for student {student_name} on {date} has been updated to {'present' if presence else 'absent'}.")
         return self.presence
