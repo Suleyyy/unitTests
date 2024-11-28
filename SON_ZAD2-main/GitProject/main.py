@@ -1,3 +1,5 @@
+import os
+
 from importStudents import ImportStudents
 from manageStudent import ModifyStudents
 
@@ -22,8 +24,9 @@ for student in lista2:
 
     print(student.get("Name"), student.get("Surname"), student.get("ID"))
 
-ModifyStudents.add_student_to_file(path, path2,'Kazimierz','Tracz','CDE1234')
+#ModifyStudents.add_student_to_file(path, path2,'Kazimierz','Tracz','CDE1234')
 #ModifyStudents.modify_student(path, path2, lista)
 
 #ModifyStudents.delete_student(path, path2, lista)
+print(os.getcwd())
 

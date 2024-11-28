@@ -26,7 +26,8 @@ class ExportStudents:
 
             file.writelines(lines)
             file.close()
-        raise("Trying to export empty list")
+            return
+        raise Exception("Trying to export empty list")
 
     @staticmethod
     def txt(path, list):
@@ -62,4 +63,5 @@ class ExportStudents:
 
             file.writelines(lines)
             file.close()
+            return
         raise Exception("Trying to export empty list")

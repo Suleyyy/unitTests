@@ -3,8 +3,8 @@ import os
 
 class TestImportStudents:
 
-    @staticmethod
-    def test_import_csv():
+
+    def test_import_csv(self):
         #GIVEN
         path = 'temp.csv'
         students = []
@@ -15,14 +15,14 @@ class TestImportStudents:
         want = [{'Name':'John', 'Surname':'Snow', 'ID':'ABC'}]
         #WHEN
         got = ImportStudents.csv(path, ["Name", "Surname", "ID"])
+        os.remove(path)
         #THEN
         assert want == got
-        os.remove(path)
 
-    @staticmethod
-    def test_import_txt():
+
+    def test_import_txt(self):
         # GIVEN
-        path = 'temp.txt'
+        path = os.getcwd()+ os.sep + 'lists\\temp.txt'
         students = []
         file = open(path, 'w')
         str1 = 'John Snow - ABC'
@@ -31,6 +31,14 @@ class TestImportStudents:
         want = [{'Name': 'John', 'Surname': 'Snow', 'ID': 'ABC'}]
         # WHEN
         got = ImportStudents.txt(path, ["Name", "Surname", "ID"])
+        os.remove(path)
         # THEN
         assert want == got
-        os.remove(path)
+
+    def test_path_exception(self):
+        try:
+            ImportStudents.csv('', ["Name", "Surname", "ID"])
+        except Exception as e:
+            assert str(e) == "Path doesn't exist"
+
+

@@ -2,8 +2,8 @@ from attendance import Attendance
 
 class TestAttendance:
 
-    @staticmethod
-    def test_attendance_for_all():
+
+    def test_attendance_for_all(self):
         #GIVEN
         attendance = Attendance()
         student = {'Name':'John','Surname':'Snow','ID': 'ABC'}
@@ -14,8 +14,8 @@ class TestAttendance:
         #THEN
         assert got == want
 
-    @staticmethod
-    def test_download_attendance():
+
+    def test_download_attendance(self):
         # GIVEN
         attendance = Attendance()
         attendance.presence = {'2024-11-24': {'John Snow': True}}
@@ -25,8 +25,8 @@ class TestAttendance:
         # THEN
         assert got == want
 
-    @staticmethod
-    def test_clear_attendance():
+
+    def test_clear_attendance(self):
         # GIVEN
         attendance = Attendance()
         attendance.presence = {'2024-11-24': {'John Snow': True}}
@@ -36,8 +36,8 @@ class TestAttendance:
         # THEN
         assert got == want
 
-    @staticmethod
-    def test_modify_attendance():
+
+    def test_modify_attendance(self):
         # GIVEN
         attendance = Attendance()
         attendance.presence = {'2024-11-24': {'John Snow': True}}
@@ -47,5 +47,23 @@ class TestAttendance:
         # THEN
         assert got == want
 
+    def test_no_attendance_exception(self):
+        attendance = Attendance()
+        attendance.presence = {}
+        date = '2024-11-24'
+        try:
+            attendance.clear_attendance(date)
+        except Exception as e:
+            assert str(e) == f"No attendance data for {date}."
+
+    def test_modify_attendance_no_student(self):
+        attendance = Attendance()
+        attendance.presence = {'2024-11-24': {'John Low': True}}
+        date = '2024-11-24'
+        student_name = 'John Snow'
+        try:
+            attendance.modify_attendance(date, 'John Snow', False)
+        except Exception as e:
+            assert str(e) == f"No student data for {student_name}."
 
 
