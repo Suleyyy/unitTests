@@ -75,20 +75,26 @@ class TestModify:
         # THEN
         assert got == want
 
-    def test_regex(self):
+
+    def test_add_student_regex(self):
         try:
             student = []
             ModifyStudents.add_student(student, '', '', '')
         except Exception as e:
             assert str(e) == 'Data are not acceptable'
 
-    def test_no_student(self):
+
+    def test_modify_student_no_student(self):
         try:
             student = []
             ModifyStudents.modify_student(student, 'Janusz', 'Tracz', '1234ASDFA')
         except Exception as e:
             assert str(e) == 'Student not found'
 
-
-
+    def test_add_student_same_id(self):
+        try:
+            student = [{'Name': 'Janusz', 'Surname': 'Tracz', 'ID': 'ABCDEFGHI'}]
+            ModifyStudents.add_student(student, 'Makrek', 'Mostowiak', 'ABCDEFGHI')
+        except Exception as e:
+            assert str(e) == 'Data are not acceptable'
 

@@ -11,7 +11,7 @@ class ModifyStudents:
     # method to add student to list
     @staticmethod
     def add_student(students,n,s,iden):
-        if re.match(ModifyStudents.name_pattern, n) and re.match(ModifyStudents.id_pattern, iden) and re.match(ModifyStudents.name_pattern, s):
+        if re.match(ModifyStudents.name_pattern, n) and re.match(ModifyStudents.id_pattern, iden) and re.match(ModifyStudents.name_pattern, s) and not any(d.get("ID") == iden for d in students):
             students.append({"Name": n, "Surname": s, "ID": iden})
             return students
         raise Exception('Data are not acceptable')
