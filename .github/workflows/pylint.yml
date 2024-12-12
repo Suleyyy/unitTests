@@ -25,7 +25,7 @@ jobs:
 
       - name: Run unit tests with coverage
         run: |
-          pytest --cov=your_project tests/ > coverage.txt
+          pytest --cov=your_project > coverage.txt
           cat coverage.txt
 
       - name: Upload coverage to Codecov (optional)
