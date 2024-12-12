@@ -29,4 +29,4 @@ for student in lista2:
 
 #ModifyStudents.delete_student(path, path2, lista)
 print(os.getcwd())
-
+#
