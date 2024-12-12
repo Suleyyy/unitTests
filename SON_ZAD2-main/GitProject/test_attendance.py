@@ -65,5 +65,3 @@ class TestAttendance:
             attendance.modify_attendance(date, 'John Snow', False)
         except Exception as e:
             assert str(e) == f"No student data for {student_name}."
-
-

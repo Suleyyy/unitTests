@@ -1,5 +1,5 @@
-from manageStudent import ModifyStudents
 import os
+from manageStudent import ModifyStudents
 
 
 class TestModify:
@@ -24,8 +24,8 @@ class TestModify:
             want = 'John;Snow;ABC123456'
             want2 = 'John Snow - ABC123456'
             ModifyStudents.add_student_to_file(path, path2, 'John', 'Snow', 'ABC123456')
-            file1 = open(path, 'r')
-            file2 = open(path2, 'r')
+            file1 = open(path, 'r', encoding='utf-8')
+            file2 = open(path2, 'r', encoding='utf-8')
             #When
             got1 = file1.read()
             got2 = file2.read()
@@ -42,8 +42,8 @@ class TestModify:
             want = 'John;Snow;ABC\nJanusz;Tracz;BCA123456'
             want2 = 'John Snow - ABC\nJanusz Tracz - BCA123456'
             ModifyStudents.add_student_to_file(path, path2, 'Janusz', 'Tracz', 'BCA123456')
-            file1 = open(path, 'r')
-            file2 = open(path2, 'r')
+            file1 = open(path, 'r', encoding='utf-8')
+            file2 = open(path2, 'r', encoding='utf-8')
             # When
             got1 = file1.read()
             got2 = file2.read()
@@ -97,4 +97,3 @@ class TestModify:
             ModifyStudents.add_student(student, 'Makrek', 'Mostowiak', 'ABCDEFGHI')
         except Exception as e:
             assert str(e) == 'Data are not acceptable'
-
