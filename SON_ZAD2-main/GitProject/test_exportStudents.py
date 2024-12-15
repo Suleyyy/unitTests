@@ -53,7 +53,7 @@ class TestExportStudents:
         students = [{'Name': '', 'Surname': '', 'ID': ''},
                     {'Name': '', 'Surname': '', 'ID': ''}]
         path = os.getcwd() + os.sep + 'lists\\temp.csv'
-        with open(path, 'w') as file:
+        with open(path, 'w'):
             pass
         #WHEN
         try:

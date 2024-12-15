@@ -7,7 +7,6 @@ class TestImportStudents:
     def test_import_csv(self):
         #GIVEN
         path = 'temp.csv'
-        students = []
         file = open(path, 'w')
         str1 = 'John;Snow;ABC'
         file.write(str1)
@@ -23,7 +22,6 @@ class TestImportStudents:
     def test_import_txt(self):
         # GIVEN
         path = os.getcwd()+ os.sep + 'lists\\temp.txt'
-        students = []
         file = open(path, 'w')
         str1 = 'John Snow - ABC'
         file.write(str1)

@@ -1,7 +1,7 @@
 import os
 
 from importStudents import ImportStudents
-from manageStudent import ModifyStudents
+#from manageStudent import ModifyStudents
 
 path = "lists/student_list.csv"
 path2 = "lists/student_list.txt"
