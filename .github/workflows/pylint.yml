@@ -5,6 +5,10 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
+
+permissions: read-all
 
 jobs:
   unit-tests:
@@ -24,13 +28,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests with coverage
-        run: |
-          pytest --cov=your_project > coverage.txt
-          cat coverage.txt
+        run: pytest -vv --cov=src 
 
-      - name: Upload coverage to Codecov (optional)
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.txt
+
 
