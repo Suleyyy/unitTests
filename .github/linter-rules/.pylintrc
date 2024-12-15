@@ -1,0 +1,4 @@
+[MESSAGES CONTROL]
+# Możesz dodać reguły dla złych cudzysłowów (bad-quotes)
+disable=
+    bad-quotes  # Wyłącza ostrzeżenia o złych cudzysłowach

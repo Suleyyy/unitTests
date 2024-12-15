@@ -1,5 +1,5 @@
-﻿from importStudents import ImportStudents
-import os
+﻿#from importStudents import ImportStudents
+#import os
 
 class Attendance:
     def __init__(self):
@@ -18,7 +18,6 @@ class Attendance:
     def download_attendance(self, date):
         if date not in self.presence:
             raise Exception(f"No attendance data for {date}.")
-
         print(f"Attendance for {date}:")
         for student, present in self.presence[date].items():
             print(f"{student}: {'present' if present else 'absent'}")
@@ -42,7 +41,7 @@ class Attendance:
         self.presence[date][student_name] = presence
         print(f"Attendance for student {student_name} on {date} has been updated to {'present' if presence else 'absent'}.")
         return self.presence
-
+"""
 if __name__ == "__main__":
     attendance = Attendance()
     students = []
@@ -87,4 +86,4 @@ if __name__ == "__main__":
             break
         else:
             print("Please try again.\n")
-
+"""
