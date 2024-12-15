@@ -30,7 +30,7 @@ jobs:
           
       - name: Run unit tests with coverage
         run: |
-          pytest -vv --cov=GitProject --cov-report=xml --cov-report=term-missing
+          pytest -vv --cov=SON_ZAD2-main --cov-report=xml --cov-report=term-missing
 
 
 
