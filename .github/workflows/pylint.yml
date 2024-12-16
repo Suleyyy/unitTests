@@ -43,15 +43,16 @@ jobs:
       
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Run Super-Linter
-      uses: super-linter/super-linter/slim@v7.1.0
+      uses: github/super-linter@v5
       env:
         VALIDATE_PYTHON_RUFF: true
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        LINTER_RULES_PATH: .github/linter-rules
+        PYTHON_LINTER_RULES_PATH: .github/linter-rules/.pylintrc
+        PYTHON_LINTER: pylint
 
 
 
