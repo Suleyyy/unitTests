@@ -48,13 +48,8 @@ jobs:
     - name: Run Super-Linter
       uses: github/super-linter@v5
       env:
-        VALIDATE_PYTHON: true
-        PYTHON_LINTER: pylint      
-        VALIDATE_YAML: false      
-        VALIDATE_JS: false          
-        VALIDATE_HTML: false        
-        VALIDATE_MARKDOWN: false   
-        VALIDATE_DOCKERFILE: false
+        VALIDATE_PYTHON_BLACK: true
+        VALIDATE_ALL_CODEBASE: false
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PYTHON_LINTER_RULES_PATH: .github/linter-rules/.pylintrc
