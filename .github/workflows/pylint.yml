@@ -50,7 +50,6 @@ jobs:
       env:
         VALIDATE_PYTHON: true
         VALIDATE_PYTHON_PYLINT: true
-        VALIDATE_ALL_CODEBASE: false
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PYTHON_LINTER_RULES_PATH: .github/linter-rules/.pylintrc
