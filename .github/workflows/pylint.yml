@@ -48,11 +48,11 @@ jobs:
     - name: Run Super-Linter
       uses: github/super-linter@v5
       env:
-        VALIDATE_PYTHON_RUFF: true
+        PYTHON_LINTER: flake8
+        VALIDATE_PYTHON: true
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PYTHON_LINTER_RULES_PATH: .github/linter-rules/.pylintrc
-        PYTHON_LINTER: pylint
+        #PYTHON_LINTER_RULES_PATH: .github/linter-rules/.pylintrc
 
 
 
