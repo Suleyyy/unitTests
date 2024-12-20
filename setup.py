@@ -13,7 +13,7 @@ version = os.getenv(
 
 setup(
     name="unitTests_ms",
-    version=version,
+    version="1.0.0",
     author="Mikołaj Sulkowski",
     author_email="mikolaj.sulkowski@edu.uekat.pl",
     description="Repo deploy",
