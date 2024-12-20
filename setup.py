@@ -3,7 +3,7 @@ import os
 from setuptools import find_packages, setup
 
 with open("requirements.txt", encoding='utf-8', errors='replace') as f:
-    requirements = [line.strip() for line in f if line.strip() and not line.startswith('��')]
+    requirements = f.read().splitlines()
 
 version = os.getenv(
     "VERSION", "0.0.0"
