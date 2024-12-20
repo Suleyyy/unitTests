@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 with open("requirements.txt", encoding='utf-8', errors='replace') as f:
     requirements = f.read().splitlines()
 
-version = os.getenv(
+ver = os.getenv(
     "VERSION", "0.0.0"
 )  # Fallback to '0.0.0'version = os.getenv('PACKAGE_VERSION', '0.0.0')  # Fallback to '0.0.0'
 
@@ -13,7 +13,7 @@ version = os.getenv(
 
 setup(
     name="unitTests_ms",
-    version="1.0.0",
+    version=ver,
     author="Mikołaj Sulkowski",
     author_email="mikolaj.sulkowski@edu.uekat.pl",
     description="Repo deploy",
