@@ -2,7 +2,7 @@ import os
 
 from setuptools import find_packages, setup
 
-with open("requirements.txt") as f:
+with open("requirements.txt", encoding='utf-8', errors='replace') as f:
     requirements = f.read().splitlines()
 
 version = os.getenv(
